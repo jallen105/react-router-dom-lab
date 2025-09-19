@@ -25,12 +25,13 @@ const MailboxForm = ({ addBox }) => {
   return (
     <>
         <main>
-            <h2>New Mailbox</h2>
+            <h1>New Mailbox</h1>
             <form onSubmit={handleSubmit} >
                 <label htmlFor="boxOwner">Boxholder: </label>
                 <input type="text" id="boxOwner" name="boxOwner" value={formData.boxOwner} onChange={handleChange} />
                 <label htmlFor="boxSize">Box Size: </label>
                 <select name="boxSize" id="boxSize" onChange={handleChange}>
+                    <option value=''>Pick a size</option>
                     <option value="Small">Small</option>
                     <option value="Medium">Medium</option>
                     <option value="Large">Large</option>
