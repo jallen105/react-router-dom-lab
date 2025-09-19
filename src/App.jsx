@@ -23,7 +23,7 @@ const App = () => {
         <Route path='/' element={<main><h1>Post Office</h1></main>} />
         <Route path='/mailboxes' element={<MailboxList mailboxes={mailboxes} />} />
         <Route path='/new-mailbox' element={<MailboxForm addBox={addBox} />} />
-        <Route path='/mailboxes/:mailboxId' element={<MailboxDetials mailboxes={mailboxes} />} /> 
+        <Route path='/mailboxes/:boxId' element={<MailboxDetials mailboxes={mailboxes} />} /> 
       </Routes>
     </>
   )
