@@ -6,10 +6,15 @@ const MailboxDetials = ({ mailboxes }) => {
 
   return (
     <>
-        <h2>Mailbox {boxDetials._id}</h2>
-        <h3>Details</h3>
-        <p>Boxholder: {boxDetials.boxOwner}</p>
-        <p>Box Size: {boxDetials.boxSize}</p>
+        { mailboxes.some(box => box._id === Number(boxId)) ? 
+        <>
+            <h2>Mailbox {boxDetials._id}</h2>
+            <h3>Details</h3>
+            <p>Boxholder: {boxDetials.boxOwner}</p>
+            <p>Box Size: {boxDetials.boxSize}</p> 
+        </> :
+        <h2>Mailbox Not Found</h2>
+        }
     </>
   )
 }

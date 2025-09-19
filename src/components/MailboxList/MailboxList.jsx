@@ -4,7 +4,10 @@ const MailboxList = ({ mailboxes }) => {
   return (
     <>
         <h2>Mailbox List</h2>
-        { mailboxes.map(box => <Link to={`/mailboxes/${box._id}`}>Mailbox {box._id}</Link>)}
+        <ul>
+            { mailboxes.map(box => <Link to={`/mailboxes/${box._id}`}><li className="mail-box">Mailbox {box._id}</li></Link>)}
+        </ul>
+
     </>
   )
 }
